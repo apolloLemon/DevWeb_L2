@@ -6,3 +6,4 @@ if($sexe=="F" && $age>=21 && $age<=40){
 } else {
 	echo "Desole, vous ne remplissez pas les conditions <br />"
 }
+?>
