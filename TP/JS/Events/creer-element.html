@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Fonction de création d'élément</title>
+</head>
+<body>
+   <script>
+//DOMCACHE
+var Z = window.document;
+
+				function createSimpleNode(tag, attributes, htmlcontent) {
+
+					/*console.log(tag);
+					console.log(attributes);
+					console.log(htmlcontent);*/
+
+					var lm = Z.createElement(tag);
+
+					if(attributes!=null){
+						for (key in attributes){
+							//console.log(key);
+							lm.setAttribute(key, attributes[key]);
+						}
+					}
+					if(htmlcontent!=null) lm.innerHTML = htmlcontent;
+					return lm;
+				}
+
+				var a = createSimpleNode("a", {"hello" : "world"}, "b");
+
+				var img = createSimpleNode('img', {
+					src : 'pix.png',
+					alt : "Pas d'image",
+					width : "10%",
+					height : "auto"
+				});
+				var br = document.createElement('br');
+				var a = createSimpleNode('a', {
+					href : 'https://www.laquadrature.net/'
+				}, 'Un site');
+				var p = createSimpleNode('p', {}, 'Du texte');
+
+				var body = document.querySelector("body");
+				body.insertBefore(img, body.lastChild);
+				body.insertBefore(br, body.lastChild);
+				body.insertBefore(a, body.lastChild);
+				body.insertBefore(br.cloneNode(), body.lastChild);
+				body.insertBefore(p, body.lastChild);
+				body.insertBefore(br.cloneNode(), body.lastChild);
+			</script>
+</body>
+</html>
+

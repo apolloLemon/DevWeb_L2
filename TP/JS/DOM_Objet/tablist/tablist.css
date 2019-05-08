@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+#gridContainer {
+	display: grid;
+	grid: 'main righttop' 'main rightdown';
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+#myForm {
+	grid-area: main;
+}
+
+#myTab {
+	grid-area: righttop;
+}
+
+#myList {
+	grid-area: rightdown;
+}
+
+.form_col {
+	display: inline-block;
+	margin-right: 5px;
+	padding: 1px 0px;
+	width: 150px;
+	min-height: 1px;
+	text-align: right;
+}
+
+input {
+	padding: 1px;
+	border: 1px solid #CCC;
+	border-radius: 2px;
+}
+
+input:focus {
+	border-color: rgba(82, 168, 236, 0.75);
+	box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+table {
+	width: 100%;
+}
+
+table, tr, td {
+	border: solid black 1px;
+	border-collapse: collapse;
+}
+

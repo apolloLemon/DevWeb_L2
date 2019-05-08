@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Utiliser l'interface Table du DOM</title>
+</head>
+<body>
+	<table id="table0">
+		<tr>
+			<td>Row 0 Cell 0</td>
+			<td>Row 0 Cell 1</td>
+		</tr>
+	</table>
+	<form>
+		<p>
+			<input value="rec" type="button" onclick="changeText();" />
+		</p>
+	</form>
+
+	<script>		
+		var table = document.getElementById("table0");
+		
+		var r = table.insertRow(1);
+		var td1 = r.insertCell(0);
+		var td2 = r.insertCell(1);
+
+		var txt1 = "Row 1 Cell 0";
+		var txt2 = "Row 1 Cell 1";
+		td1.innerHTML = txt1;
+		td2.innerHTML = txt2;
+
+		function changeText() {
+			var cells = document.querySelectorAll("td");
+			
+			cells.forEach( (elem) => {
+				elem.style.color="blue";
+				elem.style.backgroundColor="orange";
+			});
+		}
+
+	</script>
+</body>
+</html>

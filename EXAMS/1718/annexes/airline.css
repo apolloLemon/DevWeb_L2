@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.label1, .label2, .label3, .label4, .label5 {
+  font-style: italic;
+}
+
+.label1 {
+  grid-area: label1;
+}
+
+.field1 {
+  grid-area: field1;
+}
+
+.label2 {
+  grid-area: label2;
+}
+
+.field2 {
+  grid-area: field2;
+}
+
+.label3 {
+  grid-area: label3;
+}
+
+.label31 {
+  grid-area: label31;
+  align-self: end;
+}
+
+.field31 {
+  grid-area: field31;
+  align-self: end;
+}
+
+.label32 {
+  grid-area: label32;
+}
+
+.field32 {
+  grid-area: field32;
+}
+
+.label33 {
+  grid-area: label33;
+  align-self: start;
+}
+
+.field33 {
+  grid-area: field33;
+  align-self: start;
+}
+
+.label4 {
+  grid-area: label4;
+  align-self: start;
+}
+
+.field4 {
+  grid-area: field4;
+}
+
+.label5 {
+  grid-area: label5;
+  justify-self: center;
+  align-self: end;
+}
+
+.conteneur {
+  display: grid;
+  grid-template-columns: 8fr 8fr 8fr;
+  grid-template-rows: auto;
+  grid-template-areas: "label1 field1 field1" "label2 field2 field2" "label3 label31 field31" "label3 label32 field32"
+    "label3 label33 field33" "label4 field4 field4" "label5 label5 label5";
+  grid-column-gap: 2px;
+  grid-row-gap: 5px;
+  justify-items: start;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-evenly;
+}
+
+.field51, .field52 {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+table {
+  border: solid black 1px;
+}
+
+table, tr, th, td {
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td:nth-child(1) {
+  text-align: left;
+  padding-left: 5px;
+}
+
+input[type=submit], input[type=reset] {
+  background: lightgrey;
+  color: darkblue;
+  width: 100px;
+}
+
+input[type=submit]:hover {
+  background: green;
+  text-transform: uppercase;
+}
+
+input[type=reset]:hover {
+  background: red;
+  text-transform: uppercase;
+}

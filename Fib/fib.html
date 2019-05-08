@@ -1,0 +1,27 @@
+<html>
+	<body>
+		u0 = <input type="text" id="u0"> <br>
+		u1 = <input type="text" id="u1"> <br>
+		 n = <input type="text" id="n"> (dans l'internvalle [0,20])<br>
+		<button onclick="Calc()">Calculer</button>
+	</body>
+	<script>
+		//cache dom
+		var doc = window.document;
+		
+		var u0n = doc.getElementById("u0");
+		var u0v = u0n.value;
+		var u0 = parseInt(u0v);
+		var u1 = doc.getElementById("u1").value;
+		var u1 = parseInt(u1);
+		var n = parseInt(doc.getElementById("n").value);
+
+		function Calc (){
+			var a = 4;
+			console.log(a);
+			console.log(u0);
+			console.log(u0+u1);
+			n = u0 + u1;
+		}
+	</script>
+</html>

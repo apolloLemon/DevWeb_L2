@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TP noté - JS - Exercice 2 </title>
+    <link rel="stylesheet" href="maison.css">
+  </head>
+  <body>
+  <div id="gridContainer">
+    <form id="myForm" action="#">
+      <fieldset>
+      <p>
+      <label class="form_col" for="min">Surcoût minimum :</label>
+      <input class="minMax" name="tab[min]" id="min" type="number" size="3" maxlength="3" step="0.5" min="0" max="7" value="2.5" />
+      </p>
+      <p>
+      <label class="form_col" for="max">Surcoût maximum :</label>
+      <input class="minMax" name="tab[max]" id="max" type="number" size="3" maxlength="3" step="0.5" min="0" max="7" value="4.5" />
+      </p>
+      </fieldset>
+    </form>
+    <div id="myTab">
+    <table>
+    <tr><th>Département</th><th>Situation</th><th>Garage</th><th>Piscine</th><th>Surcoût</th></tr>
+    <tr><td>49</td><td>Campagne</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>49</td><td>Campagne</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>49</td><td>Campagne</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>49</td><td>Campagne</td><td>oui</td><td>oui</td><td></td></tr>
+    <tr><td>49</td><td>Ville</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>49</td><td>Ville</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>49</td><td>Ville</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>49</td><td>Ville</td><td>oui</td><td>oui</td><td></td></tr>
+    <tr><td>06</td><td>Campagne</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>06</td><td>Campagne</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>06</td><td>Campagne</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>06</td><td>Campagne</td><td>oui</td><td>oui</td><td></td></tr>
+    <tr><td>06</td><td>Ville</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>06</td><td>Ville</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>06</td><td>Ville</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>06</td><td>Ville</td><td>oui</td><td>oui</td><td></td></tr>
+    <tr><td>75</td><td>Campagne</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>75</td><td>Campagne</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>75</td><td>Campagne</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>75</td><td>Campagne</td><td>oui</td><td>oui</td><td></td></tr>
+    <tr><td>75</td><td>Ville</td><td>non</td><td>non</td><td></td></tr>
+    <tr><td>75</td><td>Ville</td><td>oui</td><td>non</td><td></td></tr>
+    <tr><td>75</td><td>Ville</td><td>non</td><td>oui</td><td></td></tr>
+    <tr><td>75</td><td>Ville</td><td>oui</td><td>oui</td><td></td></tr>
+    </table>
+    </div>
+   </div>
+  <script src="maison.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Création de structure HTML par l'API DOM</title>
+</head>
+<body>
+	<div id="modele">
+		Le World Wide Web Consortium est un <a
+			href="http://fr.wikipedia.org/wiki/Organisme_de_normalisation"
+			title="Organisme de normalisation"> organisme de standardisation</a>
+		à but non-lucratif chargé de promouvoir la compatibilité des
+		technologies du <strong>World Wide Web</strong>.
+	</div>
+	<div id="output"></div>
+	<script>
+		var d = document.querySelector('#output');
+		console.log(d);
+
+		var p1 = document.createTextNode("Le World Wide Web Consortium est un");
+		var atxt = document.createTextNode("organisme de standardisation");
+		var p2 = document.createTextNode("à but non-lucratif chargé de promouvoir la compatibilité des technologies du");
+		var www = document.createTextNode("World Wide Wed");
+
+		var strng = document.createElement("strong");
+		strng.appendChild(www);
+		
+		var a = document.createElement("a");
+		a.setAttribute('href','http://fr.wikipedia.org/wiki/Organisme_de_normalisation');
+		a.setAttribute('title','Organisme de normalisation');
+		a.appendChild(atxt);
+
+
+		d.appendChild(p1);
+		d.appendChild(a);
+		d.appendChild(p2);
+		d.appendChild(strng);
+	// A COMPLETER
+	</script>
+</body>
+</html>

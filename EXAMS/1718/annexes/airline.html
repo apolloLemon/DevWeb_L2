@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr-FR">
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="airline.css" />
+</head>
+<body>
+ <form method="post" action="airline.php">
+  <fieldset>
+   <legend>Sondage</legend>
+   <div class="conteneur">
+    <label class="label2" for="classe">Classe :</label>
+    <select class="field2" name="passager[classe]" id="classe">
+     <option value="économique" selected="selected">Economique</option>
+     <option value="affaires">Affaires</option>
+     <option value="première">Première</option>
+    </select>
+    <span class="label3">Options :</span>
+    <label class="label31" for="bagages">Bagages en soute</label>
+    <input class="field31" type="checkbox" name="passager[bagages]" id="bagages" value="oui" />
+    <label class="label32" for="priorite">File prioritaire</label>
+    <input class="field32" type="checkbox" name="passager[priorite]" id="priorite" value="oui" />
+    <label class="label33" for="voiture">Voiture de location</label>
+    <input class="field33" type="checkbox" name="passager[voiture]" id="voiture" value="oui" />
+    <label class="label4">Appréciations :</label>
+    <table class="field4">
+     <tr>
+      <td></td>
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
+     </tr>
+     <tr>
+      <td>Qualité de la nourriture</td>
+      <td>
+       <input type="radio" name="passager[nourriture]" id="nourritureA" value="A" />
+      </td>
+      <td>
+       <input type="radio" name="passager[nourriture]" id="nourritureB" value="B" checked="checked" />
+      </td>
+      <td>
+       <input type="radio" name="passager[nourriture]" id="nourritureC" value="C" />
+      </td>
+     </tr>
+     <tr>
+      <td>Confort de l'appareil</td>
+      <td>
+       <input type="radio" name="passager[confort]" id="confortA" value="A" />
+      </td>
+      <td>
+       <input type="radio" name="passager[confort]" id="confortB" value="B" checked="checked" />
+      </td>
+      <td>
+       <input type="radio" name="passager[confort]" id="confortC" value="C" />
+      </td>
+     </tr>
+     <tr>
+      <td>Politesse du personnel</td>
+      <td>
+       <input type="radio" name="passager[politesse]" id="politesseA" value="A" />
+      </td>
+      <td>
+       <input type="radio" name="passager[politesse]" id="politesseB" value="B" checked="checked" />
+      </td>
+      <td>
+       <input type="radio" name="passager[politesse]" id="politesseC" value="C" />
+      </td>
+     <tr>
+      <td>Temps d'attente</td>
+      <td>
+       <input type="radio" name="passager[attente]" id="attenteA" value="A" />
+      </td>
+      <td>
+       <input type="radio" name="passager[attente]" id="attenteB" value="B" checked="checked" />
+      </td>
+      <td>
+       <input type="radio" name="passager[attente]" id="attenteC" value="C" />
+      </td>
+     </tr>
+    </table>
+    <div class="label5">
+     <input class="field51" type="submit" value="Envoyer" />
+     <input class="field52" type="reset" value="Effacer" />
+    </div>
+   </div>
+  </fieldset>
+ </form>
+</body>
+</html>

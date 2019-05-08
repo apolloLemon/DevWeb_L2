@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TP noté - JS - Exercice 1 </title>
+    <link rel="stylesheet" href="tablist.css">
+  </head>
+  <body>
+  <div id="gridContainer">
+    <form id="myForm" method="post" action="tablist.php">
+      <fieldset>
+      <p>
+      <label class="form_col" for="cols">Colonnes :</label>
+      <input name="tab[cols]" id="cols" type="text" size="2" maxlength="2" value="3" />
+      </p>
+      <p>
+      <label class="form_col" for="rows">Lignes :</label>
+      <input name="tab[rows]" id="rows" type="text" size="2" maxlength="2" value="4" />
+      </p>
+      <p>
+      <span class="form_col">Couleur de fond :</span>
+      <label>Orange</label><input name="tab[bgColor]" id="orange" type="radio" value="orange" checked="checked" />
+      <label>Violet</label><input name="tab[bgColor]" id="violet" type="radio" value="violet" />
+      </p>
+      <p>
+      <label class="form_col" for="txtAlg">Alignement du texte :</label>
+      <select name="tab[txtAlg]" id="txtAlg">
+        <option value="center" selected="selected">Centré</option>
+        <option value="left">A gauche</option>
+        <option value="right">A droite</option>
+      </select>
+      </p>
+      <p>
+      <input type="button" id="generateTable" value="Générer le tableau" /> 
+      <input type="reset" value="Effacer" />
+      </p>
+      </fieldset>
+    </form>
+    <div id="myTab"></div>
+    <div id="myList"></div>
+  </div>
+  <script src="tablist.js"></script>
+  </body>
+</html>

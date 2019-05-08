@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0" />
+<meta charset="utf-8" />
+<title>Usage simple de Google Maps</title>
+<style>
+#map_canvas {
+	height: 100%;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+</style>
+</head>
+<script type="text/javascript"
+	src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA">
+	
+</script>
+<script>
+	var map, i = 0;
+	if ("geolocation" in navigator) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			var latlng = new google.maps.LatLng(position.coords.latitude,
+					position.coords.longitude);
+			var myOptions = {
+				zoom : 8,
+				center : {lat: -34.397, lng: 150.644}, // ou, par ex. {lat: -34.397, lng: 150.644},
+				mapTypeId : google.maps.MapTypeId.TERRAIN,
+				disableDefaultUI : true
+			}
+			map = new google.maps.Map(document.getElementById("map_canvas"),
+					myOptions);
+		});
+	} else {
+		var para = document.createElement('p');
+		para.textContent = 'Argh, no geolocation!';
+		document.body.appendChild(para);
+	}
+
+	var mode = 0;
+	var modes = ["hybrid","roadmap","satellite","terrain"];
+	function ChangeView () {
+		mode = (mode+1)%modes.length;
+		map.mapType = modes[mode];
+	}
+</script>
+</head>
+<body>
+	<h1>Exemple simple de carte</h1>
+	<input value="rec" type="button" onclick="ChangeView();" />
+	<div id="map_canvas"></div>
+</body>
+</html>
