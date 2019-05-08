@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/***********************/
+/* BLOCS */
+table {
+  width: 52%;
+  padding: 5px;
+  float: left;
+}
+
+div:nth-child(2) {
+  width: 42%;
+  float: right;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/***********************/
+/* TABLEAU */
+table, th, td {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+th {
+  background-color: lightgrey;
+}
+
+.impaire {
+  background-color: magenta;
+}
+
+/***********************/
+/* FORMULAIRE */
+legend, label, input[type=button] {
+  font-weight: bold;
+}
+
+input[type=number] {
+  width: 40px;
+}
+
+input[type=button], input[type=text] {
+  background-color: red;
+}
+
+input[type=number] {
+  background-color: lightgreen;
+}
+
+ul.dev {
+  list-style-type: "= ";
+  background-color: lightgrey;
+  font-size: 90%;
+}
